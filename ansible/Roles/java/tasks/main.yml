@@ -1,0 +1,11 @@
+--- #install java through role
+  - name: Update APT package manager repositories cache
+    #become: true
+    apt:
+  - name: Install OpenJDK Java
+    become: yes
+    apt:
+      name: "{{ item }}"
+      state: present
+    with_items:
+     openjdk-11-jdk

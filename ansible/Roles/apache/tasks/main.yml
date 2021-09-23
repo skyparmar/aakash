@@ -1,0 +1,10 @@
+- name: Install latest version of Apache
+  apt: name=apache2 state=latest
+
+
+
+- name: service start apache2
+  service:
+    name: apache2
+    enabled: yes
+  when: true
