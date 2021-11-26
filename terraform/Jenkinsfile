@@ -25,7 +25,7 @@ pipeline {
                         {
                             git "https://github.com/skyparmar/aakash-example.git"
                         }
-                    }
+                    } 
                 }
             }
 
