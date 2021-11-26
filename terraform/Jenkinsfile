@@ -18,16 +18,16 @@ pipeline {
                 ansiColor('xterm')
             }
     stages {
-        stage('checkout') {
-            steps {
-                 script{
-                        dir("terraform")
-                        {
-                            git "https://github.com/skyparmar/aakash-example.git"
-                        }
-                    }
-                }
-            }
+//         stage('checkout') {
+//             steps {
+//                  script{
+//                         dir("terraform")
+//                         {
+//                             git "https://github.com/skyparmar/aakash-example.git"
+//                         }
+//                     }
+//                 }
+//             }
 
         stage('Plan') {
             steps {
