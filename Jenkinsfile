@@ -1,19 +1,12 @@
 pipeline{
     agent any
-    environment{
-        USER_NAME ="AAKASH"
-    }
     stages{
-        stage('env variable'){
+        
+        stage('1 addition-script'){
             steps{
-                sh "printenv | sort"
+                sh '/home/insigniac-user/Desktop/aakash-example/terraform/./main.tf'
             }
         }
-        stage('use env variable'){
-            steps{
-                echo "BULID_NUMBER =${env.BULID_NUMBER}"
-                echo "current user name =${env.USER_NAME}"
-            }
-        }
+        
     }
-} 
+}
