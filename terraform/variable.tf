@@ -10,7 +10,7 @@ variable "subnet_name" {
 variable "ami_name" {
   description = "This is the name of the ami"
   type = string
-  default = "ami-02e136e904f3da870"
+  default = "ami-04902260ca3d33422"
 }
 
 variable "instance_type" {
