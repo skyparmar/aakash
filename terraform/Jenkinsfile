@@ -16,13 +16,10 @@ pipeline {
     stages {
         stage('Plan') {
             steps {
-                script {
-                    currentBuild.displayName = params.version
-                }
+                container('terraform') {
                 sh 'terraform init'
-                sh "terraform plan"
-                sh 'terraform show -no-color tfplan > tfplan.txt'
-               
+                sh 'terraform plan -out myplan'
+                }
             }
         }
 
