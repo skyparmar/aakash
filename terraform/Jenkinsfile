@@ -44,14 +44,10 @@ pipeline {
 
         stage('Apply') {
             steps {
-                sh "terraform apply -input=false tfplan"
+                sh "cd terraform/ terraform apply -input=false myplan"
             }
         }
     }
 
-    post {
-        always {
-            archiveArtifacts artifacts: 'tfplan.txt'
-        }
-    }
+   
 }
