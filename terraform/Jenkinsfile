@@ -20,8 +20,8 @@ pipeline {
                     currentBuild.displayName = params.version
                 }
                
-                sh 'terraform init'
-                sh 'terraform plan -out myplan'
+                sh 'cd /terraform init'
+                sh 'cd /terraform plan -out myplan'
    
             }
         }
