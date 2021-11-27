@@ -20,8 +20,8 @@ pipeline {
                     currentBuild.displayName = params.version
                 }
                
-                sh 'test-ec2-1/terraform/ terraform init'
-                sh 'test-ec2-1/terraform/ terraform plan -out myplan'
+                sh 'cd terraform/ terraform init'
+                sh 'cd terraform/ terraform plan -out myplan'
    
             }
         }
