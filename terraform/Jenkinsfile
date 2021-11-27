@@ -19,9 +19,9 @@ pipeline {
                 script {
                     currentBuild.displayName = params.version
                 }
-                sh 'terraform/terraform init -input=false'
-                sh "terraform/terraform plan -out=tfplan -input=false"
-                sh 'terraform/terraform show -no-color tfplan > tfplan.txt'
+                sh 'cd /terraform init -input=false'
+                sh "cd /terraform plan -out=tfplan -input=false"
+                sh 'cd /terraform show -no-color tfplan > tfplan.txt'
                
             }
         }
