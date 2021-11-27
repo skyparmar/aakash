@@ -15,12 +15,8 @@ pipeline {
 
     stages {
         stage('Plan') {
-            steps {
-                container('terraform') {
-                sh 'terraform init'
-                sh 'terraform plan -out myplan'
-                }
-            }
+           sh 'terraform init'
+           sh 'terraform plan -out myplan'
         }
 
         stage('Approval') {
