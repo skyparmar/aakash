@@ -31,6 +31,7 @@ pipeline {
 
         stage('Plan') {
             steps {
+                sh "cd /var/lib/jenkins/workspace/Ec2_test/terraform"
                 sh 'terraform init'
                 sh 'terraform workspace new ${environment}'
                 sh 'terraform workspace select ${environment}'
